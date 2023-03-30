@@ -1,11 +1,11 @@
 import React, {useState, useEffect, useContext} from 'react'
 import './css/GameField.css'
-import {MoveContext} from '../App'
+import {MoveContext, GoodContext} from '../App'
 
 const Card = (props) => {
     const[moves, setMoves] = useContext(MoveContext)
     const[fliped, setFliped] = useState(false)
-
+    const[good, setGood] = useContext(GoodContext)
     let {flipedCards, setFlipedCards} = props
 
     const cardClicked = (e) => {
@@ -24,6 +24,10 @@ const Card = (props) => {
             setTimeout(()=>{
                 if(flipedCards[0] !== flipedCards[1]){
                     setFliped(false)
+                }else{
+                    let temp = [...good]
+                    temp = temp.concat(...flipedCards)
+                    setGood(temp)
                 }
                 setFlipedCards([])
             }, 500)

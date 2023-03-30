@@ -1,18 +1,10 @@
-import React, {useState, useEffect} from 'react'
+import React, {useState, useEffect, useContext} from 'react'
 import Card from './Card'
 import './css/GameField.css'
+import {CardContext} from '../App'
 
 const GameField = (props) => {
-    const [cards, setCards] = useState([
-        "&#129409;",
-        "&#8986;",
-        "&#9749;",
-        "&#9917;",
-        "&#9976;",
-        "&#127803;",
-        "&#127814;",
-        "&#127825;"
-    ])
+    const[cards, setCards] = useContext(CardContext)
 
     const [flipedCards, setFlipedCards] = useState([])
 
@@ -23,9 +15,7 @@ const GameField = (props) => {
         setCards(newList)
     }, [])
 
-    useEffect(()=>{
-        console.log(flipedCards)
-    },[flipedCards])
+
 
   return (
     <section>

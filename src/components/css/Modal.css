@@ -1,0 +1,33 @@
+#modal{
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.436);
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 80;
+}
+
+.display-modal{
+    display: block !important;
+}
+
+#modal>div{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    z-index: 90;
+    width: 80%;
+    max-width: 400px;
+    font-size: 4rem;
+    background-color: black;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+    font-weight: bold;
+}
