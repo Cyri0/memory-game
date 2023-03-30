@@ -1,0 +1,19 @@
+footer{
+    display: flex;
+    justify-content: space-between;
+
+    width: 90vw;
+    max-width: 500px;
+    margin: auto;
+    padding: 0;
+    
+}
+
+footer>div{
+    padding: 20px;
+    background-color: var(--secondary-color);
+    border-radius: 10px;
+    width: 40%;
+    display: flex;
+    justify-content: space-between;
+}
